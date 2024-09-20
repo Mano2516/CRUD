@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>CRUD</h2>
+        <p>Product Management System</p>
+      </div>
+      <div class="inputs">
+        <input type="text" id="title" placeholder="Title" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            name=""
+            id="price"
+            placeholder="Price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            name=""
+            id="tasks"
+            placeholder="Task"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            name=""
+            id="ads"
+            placeholder="Ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            name=""
+            id="discount"
+            placeholder="Discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input " type="number" name="" id="count" placeholder="Count" />
+        <input type="text" id="category" placeholder="Category" />
+        <button id="submit">Add</button>
+      </div>
+      <div class="outputs">
+        <div class="search-block">
+          <input
+            onkeyup="searchData(this.value)"
+            type="text"
+            id="search"
+            placeholder="Search"
+          />
+          <div class="btn-search">
+            <button onclick="getSearchMood(this.id)" id="search-title">
+              Search By Title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="search-category">
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div id="delete-all">
+          <!-- <button id="delete-all-btn">Delete All</button> -->
+        </div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          <tbody id="tbody">
+            <!-- Products will be dynamically generated here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
